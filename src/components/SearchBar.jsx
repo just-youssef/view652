@@ -2,8 +2,8 @@ import React, { useState } from 'react'
 import { Stack, Typography, IconButton, Paper, InputBase, Divider } from '@mui/material';
 import SearchIcon from '@mui/icons-material/Search';
 import SearchResult from './SearchResult';
-import { fetchFromAPI } from './fetchFromAPI';
-import formatStr from './formatStr';
+import searchAPI from '../utils/searchAPI';
+import formatStr from '../utils/formatStr';
 
 const SearchBar = ({searchLabel, searchPlaceholder, api}) => {
   const [searchTerm, setSearchTerm] = useState(null);
@@ -12,7 +12,7 @@ const SearchBar = ({searchLabel, searchPlaceholder, api}) => {
   const handleSubmit = event => {
     event.preventDefault();
 
-    searchTerm.trim().length !== 0 ? fetchFromAPI(api, formatStr(searchTerm))
+    searchTerm.trim().length !== 0 ? searchAPI(api, formatStr(searchTerm))
     .then(data => setSearchData(data)) : setSearchData([])
   }
 

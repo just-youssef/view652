@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import { useParams } from 'react-router-dom';
-import getById from './getById';
-import { Stack, Box, Typography, Grid, Divider } from '@mui/material';
+import getById from '../utils/getById';
+import { Stack, Box, Typography, Grid } from '@mui/material';
 
 const ProfilePage = () => {
   const { id, api } = useParams();
