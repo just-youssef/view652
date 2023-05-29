@@ -4,7 +4,7 @@ import { Box } from '@mui/material'
 const ضباط = () => {
   const searchLabel = "إبحث بالإسم / رقم الأقدمية ( ضباط ) :"
   const searchPlaceholder = "إبحث ( ضباط ) ..."
-  const api = "ضباط"
+  const api = "dobat"
 
   return (
     <Box>
