@@ -6,8 +6,8 @@ const searchAPI = async (api, searchTerm) => {
         params: {search: searchTerm}
     };
 
-    // const { data } = await axios.get(`https://server652.vercel.app/api-root/${api}/`, options);
-    const { data } = await axios.get(`http://192.168.1.3:8000/api-root/${api}/`, options);
+    const { data } = await axios.get(`https://server652.vercel.app/api-root/${api}/`, options);
+    // const { data } = await axios.get(`http://192.168.1.3:8000/api-root/${api}/`, options);
     return data;
 }
 
