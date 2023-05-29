@@ -2,7 +2,8 @@ import axios from "axios";
 
 const searchAPI = async (api, searchTerm) => {
     const options = {
-        headers: {'Authorization': 'token f1238821ef165d5a25573e64e7f33431125a58ab'},
+        // headers: {'Authorization': 'token f1238821ef165d5a25573e64e7f33431125a58ab'}, // local Sqlite3 
+        headers: {'Authorization': 'token ca214354a9f30c84d45f31144fe656fb01c832b6'}, // vercel postgresql
         params: {search: searchTerm}
     };
 
