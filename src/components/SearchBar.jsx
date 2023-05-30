@@ -19,33 +19,34 @@ const SearchBar = ({searchLabel, searchPlaceholder, api}) => {
   return (
   <Stack direction="column">
     <Typography fontSize={{xs: 15, sm: 20}} component="div" mb={2}>{searchLabel}</Typography>
-    <Paper
-    component="form"
-    onSubmit={handleSubmit}
-    elevation={0}
-    sx={{
-        border: 2,
-        borderColor: "divider",
-        p: 1,
-        pr: 3,
-        display: 'flex', 
-        borderRadius: 20, 
-    }}
-    >
-    <InputBase
-      fullWidth
-      value={searchTerm}
-      onChange={e => setSearchTerm(e.target.value)}
-      placeholder={searchPlaceholder}
-      aria-label="search"
-    />
-    <IconButton type="submit" sx={{ p: 1.5 }} aria-label="search" size='large'>
-        <SearchIcon />
-    </IconButton>
+      <Paper
+      component="form"
+      onSubmit={handleSubmit}
+      elevation={0}
+      sx={{
+          border: 2,
+          borderColor: "divider",
+          pl: {sm: 1},
+          pr: 3,
+          py: {sm: 1},
+          display: 'flex', 
+          borderRadius: 20,
+      }}
+      >
+        <InputBase
+          fullWidth
+          value={searchTerm}
+          onChange={e => setSearchTerm(e.target.value)}
+          placeholder={searchPlaceholder}
+          aria-label="search"
+        />
+        <IconButton type="submit" sx={{ p: 1.5 }} aria-label="search" size='large'>
+            <SearchIcon />
+        </IconButton>
     </Paper>
     <Typography mt={1} fontSize={{xs: 10, sm: 15}} component="div" color="text.secondary" mr={3}>ملاحظة : الرجاء مراعاة إستخدم الحروف  ( أ ، إ ، ه ، ى )</Typography>
     
-    <Divider sx={{my: 4}} />
+    <Divider sx={{my: 3}} />
 
     {searchData.length > 0 && (<SearchResult searchData={searchData} api={api} />)}
     {/* <Typography variant="h7">لا يوجد نتائج بحث عن "{searchTerm}"</Typography> */}
