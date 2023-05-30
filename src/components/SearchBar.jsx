@@ -18,7 +18,7 @@ const SearchBar = ({searchLabel, searchPlaceholder, api}) => {
 
   return (
   <Stack direction="column">
-    <Typography variant="h6" component="div" mb={2}>{searchLabel}</Typography>
+    <Typography fontSize={{xs: 15, sm: 20}} component="div" mb={2}>{searchLabel}</Typography>
     <Paper
     component="form"
     onSubmit={handleSubmit}
@@ -43,7 +43,7 @@ const SearchBar = ({searchLabel, searchPlaceholder, api}) => {
         <SearchIcon />
     </IconButton>
     </Paper>
-    <Typography mt={1} variant="h7" component="div" color="text.secondary" mr={3}>ملاحظة : الرجاء مراعاة إستخدم الحروف كالآتى ( أ ، إ ، ه ، ى )</Typography>
+    <Typography mt={1} fontSize={{xs: 10, sm: 15}} component="div" color="text.secondary" mr={3}>ملاحظة : الرجاء مراعاة إستخدم الحروف  ( أ ، إ ، ه ، ى )</Typography>
     
     <Divider sx={{my: 4}} />
 

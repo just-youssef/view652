@@ -30,7 +30,7 @@ const App = () => {
       <CssBaseline />
         <Router>
           <Navbar check={darkMode} change={ ()=> setDarkMode(!darkMode) } />
-          <Box mx={ {sm: 5, xs: 4} } my={2} >
+          <Box mx={ {sm: 5, xs: 1} } my={2} >
             <Routes>
               <Route path="/" exact element={<ChooseCat />} />
               <Route path="/profile/:api/:id" exact element={<ProfilePage />} />

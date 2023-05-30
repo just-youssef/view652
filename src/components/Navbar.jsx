@@ -15,13 +15,13 @@ export default function Navbar({check, change}) {
             edge="start"
             color="inherit"
             aria-label="refresh"
-            sx={{ ml: 1 }}
+            sx={{ ml: {sm: 1, xs: 0} }}
             onClick={() => {navigate('/')}}
           >
             <AutoModeIcon />
           </IconButton>
 
-          <Typography variant="h5" component="div" sx={{ flexGrow: 1 }} className='title'>
+          <Typography fontSize={{xs: 20, sm: 25}} component="div" sx={{ flexGrow: 1 }} className='title'>
             الكتيبة {k} حرب إلكترونية
           </Typography>
 

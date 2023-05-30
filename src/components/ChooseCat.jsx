@@ -19,15 +19,15 @@ const ChooseCat = () => {
             <TabList onChange={handleChange} aria-label="إختر فئة البحث" variant="fullWidth">
                 <Tab
                     value="one"
-                    label={<Typography variant='h6' component="div">ضباط</Typography>}
+                    label={<Typography fontSize={{xs: 15, sm: 20}} component="div">ضباط</Typography>}
                 />
                 <Tab
                     value="two"
-                    label={<Typography variant='h6' component="div">ضباط صف</Typography>}
+                    label={<Typography fontSize={{xs: 15, sm: 20}} component="div">ضباط صف</Typography>}
                 />
                 <Tab
                     value="three"
-                    label={<Typography variant='h6' component="div">جنود</Typography>}
+                    label={<Typography fontSize={{xs: 15, sm: 20}} component="div">جنود</Typography>}
                 />
             </TabList>
         </Box>
